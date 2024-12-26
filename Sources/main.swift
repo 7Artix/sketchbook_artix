@@ -1,4 +1,1 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
-
-print("Hello, world!")
+print(TwoSum_1.twoSum(TwoSum_1.nums, TwoSum_1.target))
