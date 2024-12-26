@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sketchbook_artix}",
+            "name": "Debug sketchbook_artix",
+            "program": "${workspaceFolder:sketchbook_artix}/.build/debug/sketchbook_artix",
+            "preLaunchTask": "swift: Build Debug sketchbook_artix"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sketchbook_artix}",
+            "name": "Release sketchbook_artix",
+            "program": "${workspaceFolder:sketchbook_artix}/.build/release/sketchbook_artix",
+            "preLaunchTask": "swift: Build Release sketchbook_artix"
+        }
+    ]
+}
