@@ -28,9 +28,9 @@ class LongestPalindrome_5{
             indexCurrent = s.index(indexStart, offsetBy: i)
             if s[indexCurrent] == s[indexPre] {
                 lengthCurrent += 1
-            } else if s[indexCurrent] == s[indexPrePre] {
+            } else if s[indexCurrent] == s[indexPrePre!] {
                 if indexPrePre != indexStart {
-                    indexPrePre = s.index(indexPrePre, offsetBy: -1)
+                    indexPrePre = s.index(indexPrePre!, offsetBy: -1)
                 } else {
                     indexPrePre = nil
                 }
