@@ -1,6 +1,6 @@
 class LongestPalindrome_5{
     //两种回文型: abcba abccba
-    static let string = "aaaa"
+    static let string = "你知不知道奶牛产牛奶?"
     static func longestPalindrome(_ s: String) -> String {
         if s.count < 2 {
             return s
