@@ -1,39 +1,101 @@
 class LongestPalindrome_5{
     //两种回文型: abcba abccba
-    static let string = "abcbaa"
+    static let string = "aaaa"
     static func longestPalindrome(_ s: String) -> String {
-        if s.count == 1 {
+        if s.count < 2 {
             return s
-        } else if s.count == 2 {
-            if s.first == s.last {
-                return s
-            } else {
-                return String(s.first!)
-            }
         }
-        //s有最少3个元素
         let indexStart = s.startIndex
+        let indexEnd = s.index(before: s.endIndex)
+        var indexCurrent = indexStart
+        var indexPre: String.Index?
+        var indexPost: String.Index?
         var lengthMax = 1
         var lengthCurrent = 1
-        var stringPalindrome = ""
-        if s.first == s.dropFirst().first {
-            lengthMax = 2
-            stringPalindrome = String(s.prefix(2))
-        }
-        var indexPrePre: String.Index? = indexStart
-        var indexPre = s.index(indexStart, offsetBy: 1)
-        var indexCurrent: String.Index
-        //从第[2]个字符开始
-        for i in 2..<s.count {
+        var stringPalindrome = String(s[indexStart])
+        var needUpdate: Bool = false
+        var indexUpdateStart: String.Index?
+        var indexUpdateEnd: String.Index?
+        //奇数回文型
+        for i in 0..<s.count {
             indexCurrent = s.index(indexStart, offsetBy: i)
-            if s[indexCurrent] == s[indexPre] {
-                lengthCurrent += 1
-            } else if s[indexCurrent] == s[indexPrePre!] {
-                if indexPrePre != indexStart {
-                    indexPrePre = s.index(indexPrePre!, offsetBy: -1)
+            if i != 0 {
+                indexPre = s.index(indexCurrent, offsetBy: -1)
+            } else {
+                indexPre = nil
+            }
+            if i != s.count-1 {
+                indexPost = s.index(indexCurrent, offsetBy: 1)
+            } else {
+                indexPost = nil
+            }
+            lengthCurrent = 1
+            while indexCurrent != indexStart && indexCurrent != indexEnd {
+                print("IndexPre:\(indexPre == nil ? "nil" : "\(s[indexPre!])"), IndexPost:\(indexPost == nil ? "nil" : "\(s[indexPost!])")")
+                if let indexPreSafe = indexPre, let indexPostSafe = indexPost, s[indexPreSafe] == s[indexPostSafe] {
+                    lengthCurrent += 2
+                    if lengthCurrent > lengthMax {
+                        lengthMax = lengthCurrent
+                        needUpdate = true
+                        indexUpdateStart = indexPreSafe
+                        indexUpdateEnd = indexPostSafe
+                    }
+                    if indexPreSafe != indexStart {
+                        indexPre = s.index(indexPre!, offsetBy: -1)
+                    } else {
+                        indexPre = nil
+                    }
+                    if indexPostSafe != indexEnd {
+                        indexPost = s.index(indexPostSafe, offsetBy: 1)
+                    } else {
+                        indexPost = nil
+                    }
                 } else {
-                    indexPrePre = nil
+                    break
                 }
+            }
+            if needUpdate == true {
+                needUpdate = false
+                stringPalindrome = String(s[indexUpdateStart!...indexUpdateEnd!])
+            }
+        }
+        //偶数回文型
+        needUpdate = false
+        for i in 0..<s.count {
+            indexCurrent = s.index(indexStart, offsetBy: i)
+            indexPre = indexCurrent
+            if i != s.count-1 {
+                indexPost = s.index(indexCurrent, offsetBy: 1)
+            } else {
+                indexPost = nil
+            }
+            lengthCurrent = 0
+            while indexCurrent != indexEnd {
+                if let indexPreSafe = indexPre, let indexPostSafe = indexPost, s[indexPreSafe] == s[indexPostSafe] {
+                    lengthCurrent += 2
+                    if lengthCurrent > lengthMax {
+                        lengthMax = lengthCurrent
+                        needUpdate = true
+                        indexUpdateStart = indexPreSafe
+                        indexUpdateEnd = indexPostSafe
+                    }
+                    if indexPreSafe != indexStart {
+                        indexPre = s.index(indexPreSafe, offsetBy: -1)
+                    } else {
+                        indexPre = nil
+                    }
+                    if indexPostSafe != indexEnd {
+                        indexPost = s.index(indexPostSafe, offsetBy: 1)
+                    } else {
+                        indexPost = nil
+                    }
+                } else {
+                    break
+                }
+            }
+            if needUpdate == true {
+                needUpdate = false
+                stringPalindrome = String(s[indexUpdateStart!...indexUpdateEnd!])
             }
         }
         return stringPalindrome
