@@ -1,2 +1,2 @@
-let result = ZigzagConversion_6.convert(ZigzagConversion_6.string, 4)
+let result = ReverseInteger_7.reverse(ReverseInteger_7.x)
 print(result)
