@@ -1,2 +1,2 @@
-let result = ReverseInteger_7.reverse(ReverseInteger_7.x)
+let result = StringToIntegerAtoi_8.myAtoi(StringToIntegerAtoi_8.string)
 print(result)
