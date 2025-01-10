@@ -1,2 +1,2 @@
-let result = StringToIntegerAtoi_8.myAtoi(StringToIntegerAtoi_8.string)
+let result = PalindromeNumber_9.isPalindromeOptimized(PalindromeNumber_9.testNumber)
 print(result)
