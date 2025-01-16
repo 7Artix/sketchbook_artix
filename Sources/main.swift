@@ -1,2 +1,2 @@
-let result = ThreeSum_15.threeSum(ThreeSum_15.nums)
+let result = ContainsDuplicate_217.containsDuplicate(ContainsDuplicate_217.nums)
 print(result)
