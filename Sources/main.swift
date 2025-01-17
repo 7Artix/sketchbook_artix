@@ -1,2 +1,2 @@
-let result = ValidAnagram_242.isAnagram(ValidAnagram_242.s, ValidAnagram_242.t)
+let result = GroupAnagrams_49.groupAnagrams(GroupAnagrams_49.strings)
 print(result)
