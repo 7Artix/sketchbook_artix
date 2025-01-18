@@ -1,2 +1,2 @@
-let result = GroupAnagrams_49.groupAnagrams(GroupAnagrams_49.strings)
+let result = ProductExceptSelf_238.productExceptSelf(ProductExceptSelf_238.nums)
 print(result)
