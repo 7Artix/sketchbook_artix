@@ -1,2 +1,2 @@
-let result = ValidPrentheses_20.isValid(ValidPrentheses_20.string)
+let result = EvaluateReversePolishNotation_150.evalRPN(EvaluateReversePolishNotation_150.tokens)
 print(result)
