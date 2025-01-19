@@ -1,2 +1,2 @@
-let result = ProductExceptSelf_238.productExceptSelf(ProductExceptSelf_238.nums)
+let result = ValidSudoku_36.isValidSudoku(ValidSudoku_36.board2)
 print(result)
