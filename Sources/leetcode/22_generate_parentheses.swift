@@ -49,27 +49,22 @@ class GenerateParenthesisStack_22 {
     static func generateParenthesis(_ n: Int) -> [String] {
         var result: [String] = []
         var stack: [State] = [State(sequence: "", open: 0, close: 0)]
-        
         while !stack.isEmpty {
             let current = stack.removeLast()
-            
             // If sequence is complete, add to result
             if current.sequence.count == n * 2 {
                 result.append(current.sequence)
                 continue
             }
-            
             // Add an open parenthesis if possible
             if current.open < n {
                 stack.append(State(sequence: current.sequence + "(", open: current.open + 1, close: current.close))
             }
-            
             // Add a close parenthesis if possible
             if current.close < current.open {
                 stack.append(State(sequence: current.sequence + ")", open: current.open, close: current.close + 1))
             }
         }
-        
         return result
     }
 }
