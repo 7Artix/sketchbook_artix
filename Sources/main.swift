@@ -1,3 +1,2 @@
-let result = GenerateParenthesis_22.generateParenthesis(GenerateParenthesis_22.number)
-print(GenerateParenthesis_22.numbersGenerator(4))
+let result = Solution_739.dailyTemperatures_ON(Solution_739.temperatures2)
 print(result)
