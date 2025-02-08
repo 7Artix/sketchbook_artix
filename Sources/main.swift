@@ -1,2 +1,2 @@
-let result = Solution_167.twoSum(Solution_167.numbers,Solution_167.target)
+let result = Solution_42.trap(Solution_42.height2)
 print(result)
