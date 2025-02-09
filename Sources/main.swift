@@ -1,2 +1,2 @@
-let result = Solution_42.trap(Solution_42.height2)
+let result = Solution_704.search(Solution_704.nums, Solution_704.target1)
 print(result)
