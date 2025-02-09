@@ -1,2 +1,2 @@
-let result = Solution_704.search(Solution_704.nums, Solution_704.target1)
+let result = Solution_74.searchMatrix(Solution_74.matrix,Solution_74.target)
 print(result)
