@@ -1,2 +1,2 @@
-let result = Solution_74.searchMatrix(Solution_74.matrix,Solution_74.target)
+let result = Solution_875.minEatingSpeed(Solution_875.piles, Solution_875.h)
 print(result)
