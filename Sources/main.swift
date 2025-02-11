@@ -1,2 +1,2 @@
-let result = Solution_875.minEatingSpeed(Solution_875.piles, Solution_875.h)
+let result = Solution_153.findMin(Solution_153.nums)
 print(result)
