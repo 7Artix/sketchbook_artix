@@ -1,5 +1,5 @@
 class Solution_153 {
-    static let nums = [3,4,5,1,2]
+    static let nums = [1]
     static func findMin(_ nums: [Int]) -> Int {
         var pointerLeft = 0
         var pointerRight = nums.count - 1
