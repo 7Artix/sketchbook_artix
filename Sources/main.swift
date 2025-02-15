@@ -1,2 +1,2 @@
-let result = Solution_4.findMedianSortedArrays(Solution_4.nums1, Solution_4.nums2)
+let result = Solution_121.maxProfit(Solution_121.prices)
 print(result)
