@@ -1,2 +1,2 @@
-let result = Solution_424.characterReplacement(Solution_424.string3, Solution_424.k3)
+let result = Solution_424.characterReplacementArtix(Solution_424.string4, Solution_424.k4)
 print(result)
