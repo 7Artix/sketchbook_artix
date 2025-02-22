@@ -1,2 +1,2 @@
-let result = Solution_424.characterReplacementArtix(Solution_424.string4, Solution_424.k4)
+let result = Solution_567.checkInclusion(Solution_567.s1, Solution_567.s2)
 print(result)
