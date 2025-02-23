@@ -1,2 +1,2 @@
-let result = Solution_567.checkInclusion(Solution_567.s1, Solution_567.s2)
+let result = Solution_76.minWindow_1(Solution_76.s, Solution_76.t)
 print(result)
